@@ -39,9 +39,16 @@ npm run dev
 ## 🖼️ Screenshots
 Here are some screenshots of the Secure LMS:
 
-![Dashboard](screenshots/dashboard.png)
-![Course Management](screenshots/course_management.png)
-![Secure Video Playback](screenshots/secure_video.png)
+![Landing Page](screenshots/Sc1.png)
+![Features](screenshots/Sc2.png)
+![Trending Courses](screenshots/Sc3.png)
+![Footer Section](screenshots/Sc4.png)
+![Login Page](screenshots/Sc5.png)
+![Signup Page](screenshots/Sc6.png)
+![Dashboard](screenshots/Sc7.png)
+![Admin Page](screenshots/Sc8.png)
+![Adding A Course](screenshots/Sc9.png)
+![Editing A Course](screenshots/Sc10.png)
 
 ## 🤝 Contributing
 Contributions are welcome! Follow these steps:
