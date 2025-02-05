@@ -21,7 +21,7 @@ The **Secure Learning Management System (LMS)** is a highly secure and scalable 
 ## 🏗️ Installation
 ### Prerequisites
 - Node.js & npm installed
-- MongoDB setup
+- Sqlite Setup
 
 ### Steps
 ```sh
@@ -39,7 +39,7 @@ npm run dev
 ## 🖼️ Screenshots
 Here are some screenshots of the Secure LMS:
 
-![Landing Page](screenshots/Sc1.png)
+##[Landing Page](screenshots/Sc1.png)
 ![Features](screenshots/Sc2.png)
 ![Trending Courses](screenshots/Sc3.png)
 ![Footer Section](screenshots/Sc4.png)
