@@ -39,7 +39,7 @@ npm run dev
 ## 🖼️ Screenshots
 Here are some screenshots of the Secure LMS:
 
-##Landing Page
+## Landing Page
 (screenshots/Sc1.png)
 ![Features](screenshots/Sc2.png)
 ![Trending Courses](screenshots/Sc3.png)
