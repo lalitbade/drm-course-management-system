@@ -40,15 +40,33 @@ npm run dev
 Here are some screenshots of the Secure LMS:
 
 ## Landing Page
-(screenshots/Sc1.png)
+![Landing Page](screenshots/Sc1.png)
+
+## Features
 ![Features](screenshots/Sc2.png)
+
+## Trending Courses
 ![Trending Courses](screenshots/Sc3.png)
+
+## Footer Section
 ![Footer Section](screenshots/Sc4.png)
+
+## Login Page
 ![Login Page](screenshots/Sc5.png)
+
+## Signup Page
 ![Signup Page](screenshots/Sc6.png)
+
+## Dashboard
 ![Dashboard](screenshots/Sc7.png)
+
+## Admin Page
 ![Admin Page](screenshots/Sc8.png)
+
+## Adding A Course
 ![Adding A Course](screenshots/Sc9.png)
+
+## Editing A Course
 ![Editing A Course](screenshots/Sc10.png)
 
 ## 🤝 Contributing
