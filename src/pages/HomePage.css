@@ -1,0 +1,63 @@
+.home-page {
+  background-color: #121212;
+  color: #ddd;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  color: #fff;
+  margin-top: 50px;
+}
+
+.main-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sidebar {
+  width: 250px;  /* Sidebar width */
+  background-color: #bbbbbb;
+  color: black;
+  padding: 20px;
+  flex-shrink: 0;  /* Prevent the sidebar from shrinking */
+}
+
+.freecontent {
+  display: flex;
+  flex-direction: column;  /* Stack content vertically */
+  flex-grow: 1;
+  padding: 20px;
+  color: #ddd;
+  background-color: #121212;
+}
+
+.cc {
+  margin-left: 16%;  /* Offsets content to the right */
+  width: 70%;  /* Content width */
+  display: flex;
+  flex-direction: column;  /* Stack course cards vertically */
+  gap: 30px;  /* Space between course cards */
+}
+
+.course-item {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;  /* Ensure cards take up full width of the parent */
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.course-item h3 {
+  margin-top: 15px;
+}
+
+.course-item p {
+  font-size: 14px;
+  color: #bbb;
+}

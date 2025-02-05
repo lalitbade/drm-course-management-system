@@ -1,0 +1,113 @@
+.dashboard-page {
+    display: flex;
+    flex-direction: column;
+    background-color: #4b4949;
+    color: #ddd;
+    min-height: 100vh;
+  }
+  
+  .dashboard-content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .dashboard-main {
+    background-color:#121212;
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .dashboard-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(200, 200, 200);
+  }
+  
+  /* Course Card Styling */
+  .course-card {
+    background: #1e1f22;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #2a2a2d;
+  }
+  
+  .course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .status-badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  .status-badge.completed {
+    background: #198754;
+    color: white;
+  }
+  
+  .status-badge.inprogress {
+    background: #ffc107;
+    color: black;
+  }
+  
+  .status-badge.notstarted {
+    background: #6c757d;
+    color: white;
+  }
+  
+  .lessons-count {
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  .course-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .course-description {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 15px;
+  }
+  
+  .course-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .reset-progress {
+    background: black;
+    border: 1px solid #dc3545;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .start-course {
+    background: #198754;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .reset-progress:hover {
+    background: #dc3545;
+    color: white;
+  }
+  
+  .start-course:hover {
+    background: #157347;
+  }
+  

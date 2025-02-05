@@ -1,0 +1,88 @@
+.course-card {
+  background-color: #1c1c1e;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.course-card:hover {
+  background-color: #29292b;
+}
+
+.course-header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.status-badge {
+  background-color: #444;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+.lessons-count {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.course-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.course-description {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.course-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.reset-progresses, .start-courses button {
+  background-color: #0b0b0b;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.course-content {
+  margin-top: 10px;
+  padding: 10px;
+  background: #2c2c2e;
+  border-radius: 5px;
+}
+
+.lesson-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #3a3a3c;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.lesson-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.lesson-item:hover {
+  background: #444;
+}
+button{
+  background-color: #0b0b0b;
+  color: white;
+
+}

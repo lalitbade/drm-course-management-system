@@ -1,0 +1,33 @@
+.course-form {
+    background: #181818;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 400px;
+    color: white;
+  }
+  
+  .course-form input,
+  .course-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    background: #262626;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .course-form button {
+    width: 100%;
+    padding: 10px;
+    background: #00b894;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .course-form button:hover {
+    background: #019d80;
+  }
+  

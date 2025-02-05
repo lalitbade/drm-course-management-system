@@ -1,0 +1,156 @@
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #1e1e1e;
+    color: #000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Sidebar Logo */
+  .sidebar-logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Search Bar */
+  .sidebar-search {
+    display: flex;
+    align-items: center;
+    background: #2a2a2a;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .search-icon {
+    margin-right: 10px;
+    color: #bbb;
+  }
+  
+  .sidebar-search input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ddd;
+    font-size: 14px;
+  }
+  
+  /* Sidebar Menu */
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-menu a {
+    color: #050505;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+  
+  .sidebar-menu a:hover {
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Sections (Courses & Resources) */
+  .sidebar-section {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-section h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000000;
+  }
+  
+  .sidebar-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-section li {
+    margin-bottom: 6px;
+  }
+  
+  .sidebar-section a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .sidebar-section a:hover {
+    color: #fff;
+  }
+  
+  /* User Profile */
+  .sidebar-profile {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #444;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  
+  .profile-name {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .profile-email {
+    font-size: 12px;
+    color: #bbb;
+  }
+  
+  .logout-btn {
+    background-color: #333;
+    color: #ddd;
+    border: none;
+    padding: 3px;
+    height: 40px;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 13px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: #444;
+  }
+  

@@ -1,0 +1,31 @@
+.video-upload {
+    background: #181818;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 400px;
+    color: white;
+  }
+  
+  .video-upload input {
+    width: 100%;
+    padding: 10px;
+    background: #262626;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .video-upload button {
+    background: #00b894;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .video-upload button:hover {
+    background: #019d80;
+  }
+  
