@@ -58,7 +58,7 @@ Here are some screenshots of the Secure LMS:
 ![Signup Page](screenshots/Sc6.png)
 
 ## Dashboard
-![Dashboard](screenshots/Sc7.png)
+![Dashboard](screenshots/Screenshot 2025-02-09 at 16.21.03.png)
 
 ## Admin Page
 ![Admin Page](screenshots/Sc8.png)
