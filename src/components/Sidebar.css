@@ -1,9 +1,9 @@
 /* Sidebar Styling */
 .sidebar {
     width: 250px;
-    background-color: #1e1e1e;
+    background-color: #ffffff;
     color: #000000;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -45,6 +45,7 @@
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
+    overflow-y: auto;
   }
   
   .sidebar-menu li {
@@ -99,58 +100,73 @@
     color: #fff;
   }
   
-  /* User Profile */
-  .sidebar-profile {
-    display: flex;
-    flex-direction: row;
-    margin-top: auto;
-    padding-top: 20px;
-    border-top: 1px solid #444;
-  }
-  
-  .profile-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .profile-icon {
-    width: 40px;
-    height: 40px;
-    background-color: #444;
-    color: #ddd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-weight: bold;
-  }
-  
-  .profile-name {
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  .profile-email {
-    font-size: 12px;
-    color: #bbb;
-  }
-  
-  .logout-btn {
-    background-color: #333;
-    color: #ddd;
-    border: none;
-    padding: 3px;
-    height: 40px;
-    width: 100px;
-    margin-left: 10px;
-    margin-top: 13px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .logout-btn:hover {
-    background-color: #444;
-  }
-  
+  /* User Profile Section at the Bottom */
+.sidebar-profile {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  gap: 15px; /* Space between profile info and logout button */
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Profile Info */
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ddd;
+}
+
+/* Profile Icon */
+.profile-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #444;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.profile-icon:hover {
+  background-color: #555;
+}
+
+/* Profile Name and Email */
+.profile-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.profile-email {
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* Logout Button */
+.logout-btn {
+  background-color: #f44336; /* Red color */
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px); /* Slight lift effect */
+}

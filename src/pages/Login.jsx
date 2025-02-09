@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Footer from "../components/Footer";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -33,7 +32,7 @@ const Login = () => {
     };
 
     try {
-      const response = await fetch("http://172.26.44.202:8000/api/login/", {
+      const response = await fetch("http://127.0.0.1:8000/api/login/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -67,7 +66,7 @@ const Login = () => {
         <div className="w-3/5 h-full flex flex-col justify-center items-center px-8">
           {/* Logo at the Top */}
           <div className="mb-8">
-            <img src="/Edu_Sphere_Logo_yoyo.svg" className="w-35 h-35" alt="EduSphere Logo" />
+            <img src="/Edu_Sphere_Logo.svg" className="w-35 h-35" alt="EduSphere Logo" />
           </div>
 
           {/* Heading */}

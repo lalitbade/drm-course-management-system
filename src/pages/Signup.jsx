@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Auth.css";
 import { useNavigate } from 'react-router-dom';
-import Footer from "../components/Footer";
+
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ export default function Signup() {
     }
 
     try {
-      const response = await fetch('http://172.26.44.202:8000/api/register/', {
+      const response = await fetch('http://127.0.0.1:8000/api/register/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ export default function Signup() {
   <div className="w-3/5 h-full flex flex-col justify-center items-center px-12">
     {/* Logo at the Top */}
     <div className="mb-8">
-      <img src="/Edu_Sphere_Logo_yoyo.svg" className="w-30 h-30" alt="EduSphere Logo" />
+      <img src="/Edu_Sphere_Logo.svg" className="w-30 h-30" alt="EduSphere Logo" />
     </div>
 
     {/* Heading */}

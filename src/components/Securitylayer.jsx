@@ -44,15 +44,6 @@ const SecurityLayer = ({ children }) => {
       }
     };
 
-    // 🕵️ **Detect Screen Recording**
-    const detectRecording = setInterval(() => {
-      const screenSize = window.outerWidth - window.innerWidth;
-      if (screenSize > 10) {
-        alert("Screen recording detected! Video playback stopped.");
-        window.location.href = "about:blank"; // Redirect user
-      }
-    }, 2000);
-
     // 🕵️ **Run DevTools Detection in a Loop**
     const devToolsInterval = setInterval(() => {
       detectDevTools();
@@ -68,7 +59,7 @@ const SecurityLayer = ({ children }) => {
     // ✅ Cleanup Function
     return () => {
       clearInterval(devToolsInterval);
-      clearInterval(detectRecording);
+
       document.removeEventListener("copy", disableClipboard);
       document.removeEventListener("cut", disableClipboard);
       document.removeEventListener("paste", disableClipboard);

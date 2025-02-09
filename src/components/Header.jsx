@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Bell, Search, BookOpen } from "lucide-react";
-import "./Header.css";
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false); // Track if user is logged in
@@ -31,45 +31,46 @@ const Header = () => {
     setShowDropdown(!showDropdown);
   };
 
+  // Handle logo click (navigate to dashboard or landing page based on login state)
+  const handleLogoClick = () => {
+    if (isLoggedIn) {
+      navigate('/dashboard'); // Redirect to the dashboard for logged-in users
+    } else {
+      navigate('/landing'); // Redirect to the landing page for non-logged-in users
+    }
+  };
+
   return (
-    <header className="header">
-      {/* Logo */}
-      <div className="header-logo">
-        <BookOpen size={24} className="logo-icon" /> {/* Book icon for learning */}
-        <span>EduSphere</span>
-      </div>
+    <nav className="sticky top-0 z-50 backdrop-blur-xl bg-[#0A0F1C]/80 border-b border-white/10 shadow-md">
+      <div className="container mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo Section */}
+          <div className="flex items-center gap-3 text-white cursor-pointer" onClick={handleLogoClick}>
+            <img src="/Edu_Sphere_Logo__.svg" alt="EduSphere Logo" className="filter invert-100" />
+          </div>
 
-      {/* Search Bar */}
-      <div className="header-search">
-        <Search size={16} className="search-icon" />
-        <input type="text" placeholder="Search courses..." />
-      </div>
+          {/* Navigation Links (Desktop version) */}
+          <div className="hidden md:flex items-center gap-10">
+            <NavLink className="text-white/90 hover:text-white transition-all">Platform</NavLink>
+            <NavLink className="text-white/90 hover:text-white transition-all">Solutions</NavLink>
+            <NavLink className="text-white/90 hover:text-white transition-all">Resources</NavLink>
+            <NavLink className="text-white/90 hover:text-white transition-all">Pricing</NavLink>
+          </div>
 
-      {/* Icons (Notifications & Profile) */}
-      <div className="header-icons">
-        <Bell size={20} className="header-icon" />
-        
-        {/* Profile Icon with Dropdown */}
-        <div className="profile-icon" onClick={toggleDropdown}>
-          LB
-        </div>
-
-        {/* Dropdown Menu */}
-        {showDropdown && (
-          <div className="dropdown-menu">
-            {isLoggedIn ? (
-              <div className="dropdown-item" onClick={toggleLoginLogout}>
-                Logout
-              </div>
-            ) : (
-              <div className="dropdown-item" onClick={toggleLoginLogout}>
-                Login
-              </div>
+          {/* Right Side (Get Started / Sign In / Sign Out buttons) */}
+          <div className="flex items-center gap-6">
+            <button onClick={toggleLoginLogout} className="px-6 py-3 text-sm text-white/80 hover:text-white transition-colors">
+              {isLoggedIn ? "Sign Out" : "Sign In"}
+            </button>
+            {!isLoggedIn && (
+              <button onClick={toggleLoginLogout} className="px-6 py-3 text-sm bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full hover:opacity-90 transition-opacity">
+                Get Started
+              </button>
             )}
           </div>
-        )}
+        </div>
       </div>
-    </header>
+    </nav>
   );
 };
 

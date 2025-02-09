@@ -1,59 +1,115 @@
 import React from "react";
-import { Home, BookOpen, Video, Settings, Search } from "lucide-react";
-import "./Sidebar.css";
+import { Home, BookOpen, Video, Settings as SettingsIcon, Search } from "lucide-react";  // Renaming Settings to SettingsIcon
+import { useNavigate } from "react-router-dom"; // Using useNavigate hook from react-router-dom
 
 const Sidebar = () => {
+  const navigate = useNavigate(); // For redirecting to login page after log out
+
   return (
-    <div className="sidebar">
+    <div className="bg-[#111827] text-white w-72 flex-col p-6 shadow-lg"> {/* Changed w-65 to w-72 */}
 
       {/* Search Bar */}
-      <div className="sidebar-search">
-        <Search size={16} className="search-icon" />
-        <input type="text" placeholder="Search" />
+      <div className="flex items-center bg-[#2D3748] p-3 rounded-lg mb-6">
+        <Search size={16} className="text-white" />
+        <input
+          type="text"
+          placeholder="Search"
+          className="bg-transparent text-white ml-3 outline-none w-full"
+        />
       </div>
 
       {/* Navigation Links */}
-      <ul className="sidebar-menu">
-        <li><a href="/dashboard"><Home size={16} /> Dashboard</a></li>
-        <li><a href="/course"><BookOpen size={16} /> Courses</a></li>
-        <li><a href="/courses"><Video size={16} /> Videos</a></li>
-        <li><a href="/settings"><Settings size={16} /> Settings</a></li>
+      <ul className="space-y-6 mb-8">
+        <li>
+          <a
+            href="/dashboard"
+            className="flex items-center text-white/90 hover:text-white transition-colors"
+          >
+            <Home size={16} className="mr-3" />
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a
+            href="/course"
+            className="flex items-center text-white/90 hover:text-white transition-colors"
+          >
+            <BookOpen size={16} className="mr-3" />
+            Courses
+          </a>
+        </li>
+        <li>
+          <a
+            href="/courses"
+            className="flex items-center text-white/90 hover:text-white transition-colors"
+          >
+            <Video size={16} className="mr-3" />
+            Free Courses
+          </a>
+        </li>
+        <li>
+          <a
+            href="/settings"
+            className="flex items-center text-white/90 hover:text-white transition-colors"
+          >
+            <SettingsIcon size={16} className="mr-3" /> {/* Using renamed icon */}
+            Settings
+          </a>
+        </li>
       </ul>
 
       {/* Course Categories */}
-      <div className="sidebar-section">
-        <h3>COURSES</h3>
-        <ul>
-          <li><a href="#">Mastering the Art of Digital Illustration</a></li>
-          <li><a href="#">Photography Essentials</a></li>
-          <li><a href="#">Unlocking the Power of Social Media</a></li>
-          <li><a href="#">The Art of Mindful Living</a></li>
-          <li><a href="#">Coding for Creatives</a></li>
+      <div className="mt-6 mb-8">
+        <h3 className="text-white/80 font-semibold mb-3">COURSES</h3>
+        <ul className="space-y-2">
+          <li>
+            <a href="#" className="text-white/80 hover:text-white transition-colors">
+              Mastering the Art of Digital Illustration
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-white/80 hover:text-white transition-colors">
+              Photography Essentials
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-white/80 hover:text-white transition-colors">
+              Unlocking the Power of Social Media
+            </a>
+          </li>
         </ul>
       </div>
 
       {/* Resources */}
-      <div className="sidebar-section">
-        <h3>RESOURCES</h3>
-        <ul>
-          <li><a href="#">Beginner's Guide to SEO</a></li>
-          <li><a href="#">Facebook Blueprint</a></li>
-          <li><a href="#">Canva Design School</a></li>
-          <li><a href="#">Marketing Guide</a></li>
-          <li><a href="#">Help Center</a></li>
+      <div className="mt-6 mb-8">
+        <h3 className="text-white/80 font-semibold mb-3">RESOURCES</h3>
+        <ul className="space-y-2">
+          <li>
+            <a href="#" className="text-white/80 hover:text-white transition-colors">
+              Beginner's Guide to SEO
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-white/80 hover:text-white transition-colors">
+              Facebook Blueprint
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-white/80 hover:text-white transition-colors">
+              Canva Design School
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-white/80 hover:text-white transition-colors">
+              Marketing Guide
+            </a>
+          </li>
+          <li>
+            <a href="#" className="text-white/80 hover:text-white transition-colors">
+              Help Center
+            </a>
+          </li>
         </ul>
-      </div>
-
-      {/* User Profile */}
-      <div className="sidebar-profile">
-        <div className="profile-info">
-          <div className="profile-icon">LB</div>
-          <div>
-            <p className="profile-name">Lalit Bade</p>
-            <p className="profile-email">lbade@gitam.in</p>
-          </div>
-        </div>
-        <button className="logout-btn">Log Out</button>
       </div>
     </div>
   );

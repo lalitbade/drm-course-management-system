@@ -8,6 +8,8 @@ import HomePage from './pages/HomePage';
 import Signup from './pages/Signup';
 import AdminDashboard from './pages/AdminDashboard';
 import EditCourseForm from './pages/EditCourseContent';
+import LandingPage from './pages/LandingPage';
+import UserSettings from './pages/UserSettings';
 
 
 function App() {
@@ -16,12 +18,14 @@ function App() {
       <div className="App">
         
         <Routes>
+        <Route path="/" element={<LandingPage />} />
           <Route path="/courses" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/course" element={<CourseDetail />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/settings" element={<UserSettings />} />
           <Route path='/edit-course/:id' element={<EditCourseForm />} />
           
         </Routes>

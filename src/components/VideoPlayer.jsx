@@ -9,6 +9,8 @@ const VideoPlayer = ({ apiEndpoint }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [position, setPosition] = useState({ top: "10%", left: "10%" });
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(1);  // Full volume by default
 
   // Function to generate random position within the video
   const getRandomPosition = () => {
@@ -114,6 +116,13 @@ const VideoPlayer = ({ apiEndpoint }) => {
         if (mounted) {
           setError(error.message || 'Failed to process video');
           setLoading(false);
+
+          // Fallback to local video when backend fails
+          videoURL = '/videos/videoplayback.mp4'; // Adjust path to your public folder
+          if (videoRef.current) {
+            videoRef.current.src = videoURL;
+            setLoading(false);
+          }
         }
       }
     };
@@ -134,9 +143,6 @@ const VideoPlayer = ({ apiEndpoint }) => {
 
     return () => {
       mounted = false;
-      if (videoURL) {
-        URL.revokeObjectURL(videoURL);
-      }
       if (playerRef.current) {
         playerRef.current.destroy();
       }
@@ -145,26 +151,69 @@ const VideoPlayer = ({ apiEndpoint }) => {
     };
   }, [apiEndpoint, decryptVideo, initPlayer]);
 
+  const togglePlayPause = () => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  const handleVolumeChange = (e) => {
+    const newVolume = e.target.value;
+    videoRef.current.volume = newVolume;
+    setVolume(newVolume);
+  };
+
+  const toggleFullscreen = () => {
+    if (videoRef.current.requestFullscreen) {
+      videoRef.current.requestFullscreen();
+    } else if (videoRef.current.mozRequestFullScreen) { // Firefox
+      videoRef.current.mozRequestFullScreen();
+    } else if (videoRef.current.webkitRequestFullscreen) { // Chrome, Safari, Opera
+      videoRef.current.webkitRequestFullscreen();
+    } else if (videoRef.current.msRequestFullscreen) { // IE/Edge
+      videoRef.current.msRequestFullscreen();
+    }
+  };
+
   return (
-    <div className="video-section">
-      <video ref={videoRef} className="video-player" controls autoPlay />
+    <div className="video-container relative w-full h-full">
+      <video ref={videoRef} className="video-player w-full h-full object-cover" controls={false} autoPlay />
       {/* Watermark on top of video */}
       <div
         ref={watermarkRef}
-        className="watermark"
-        style={{ top: position.top, left: position.left, zIndex: 99999 }}
+        className="watermark absolute"
+        style={{ top: position.top, left: position.left, zIndex: 9999, color: 'black', fontSize: '1.5rem', fontWeight: 'bold' }}
       >
         lalit - 7075654053
+      </div>
+
+      {/* Custom Controls */}
+      <div className="custom-controls absolute bottom-4 left-1/2 transform -translate-x-1/2 w-full p-4 flex justify-between items-center">
+        <button onClick={togglePlayPause} className="play-pause-btn text-white text-3xl bg-opacity-50 p-2 rounded-md">
+          {isPlaying ? "⏸️" : "▶️"}
+        </button>
+        <div className="volume-controls flex items-center space-x-3">
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value={volume}
+            onChange={handleVolumeChange}
+            className="volume-slider w-32"
+          />
+          <span className="text-black">{Math.round(volume * 100)}%</span>
+        </div>
+        <button onClick={toggleFullscreen} className="fullscreen-btn text-white text-3xl bg-opacity-50 p-2 rounded-md">
+          🗖
+        </button>
       </div>
     </div>
   );
 };
-
-// Watermark text component
-const WatermarkText = () => (
-  <div className="text-white text-opacity-40 text-lg font-bold select-none whitespace-nowrap mix-blend-difference">
-    Copyright ©️ 2024
-  </div>
-);
 
 export default VideoPlayer;

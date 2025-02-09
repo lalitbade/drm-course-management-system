@@ -2,55 +2,6 @@
   max-width: 100%;
   margin: 0 auto;
   position: relative;
-  background-color: #000; /* Optional: adds background to the video container */
-}
-
-.video-player {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block; /* Ensures the video element is block-level */
-}
-
-.watermark {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white;
-  padding: 5px 10px;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 4px;
-  pointer-events: none; /* Prevents user interaction */
-  animation: moveWatermark 30s ease-in-out infinite; /* Smooth, continuous floating */
-}
-
-/* Floating effect using keyframes */
-@keyframes moveWatermark {
-  0% {
-    top: 10%;
-    left: 10%;
-  }
-  25% {
-    top: 10%;
-    left: 80%;
-  }
-  50% {
-    top: 80%;
-    left: 80%;
-  }
-  75% {
-    top: 80%;
-    left: 10%;
-  }
-  100% {
-    top: 10%;
-    left: 10%;
-  }
-}
-.video-container {
-  max-width: 100%;
-  margin: 0 auto;
-  position: relative;
   background-color: #000;
 }
 
@@ -64,7 +15,7 @@
 .watermark {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 5px 10px;
   font-size: 14px;
   font-weight: bold;
@@ -95,11 +46,6 @@
 .play-pause-btn {
   font-size: 20px;
   color: white;
-}
-
-.volume-control {
-  display: flex;
-  align-items: center;
 }
 
 .volume-slider {

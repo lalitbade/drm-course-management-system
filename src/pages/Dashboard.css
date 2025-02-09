@@ -12,7 +12,7 @@
   }
   
   .dashboard-main {
-    background-color:#121212;
+    background-color:#0f1117;
     flex: 1;
     padding: 20px;
   }
@@ -109,5 +109,38 @@
   
   .start-course:hover {
     background: #157347;
+  }
+  .pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-button {
+    background-color: #3f289b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination-button:hover {
+    background-color: #45a049;
+  }
+  
+  .pagination-button:disabled {
+    background-color: #ccc;
+    color: black;
+    cursor: not-allowed;
+  }
+  
+  .pagination-info {
+    font-size: 16px;
+    color: white;
   }
   
