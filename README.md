@@ -13,7 +13,7 @@ The **Secure Learning Management System (LMS)** is a highly secure and scalable 
 
 ## 🛠️ Tech Stack
 - **Frontend:** ReactJS, Next.js, Tailwind CSS
-- **Backend:** Node.js, Express.js, MongoDB
+- **Backend:** Django,Django REST Framework,Sql Lite
 - **Authentication:** JWT, OAuth2
 - **Cloud & Deployment:** AWS (EC2, S3, Lambda), Docker, Kubernetes
 - **Security:** AES Encryption, DRM for videos, HTTPS enforcement
@@ -58,7 +58,7 @@ Here are some screenshots of the Secure LMS:
 ![Signup Page](screenshots/Sc6.png)
 
 ## Dashboard
-![Dashboard](screenshots/Screenshot 2025-02-09 at 16.21.03.png)
+![Dashboard](screenshots/dash.png)
 
 ## Admin Page
 ![Admin Page](screenshots/Sc8.png)
